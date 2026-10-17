@@ -1,0 +1,11 @@
+target/
+build/
+dist/
+nbproject/private/
+.idea/
+.vscode/
+*.class
+*.jar
+*.log
+.env
+.m2-cache/

@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS userdb;
+CREATE DATABASE IF NOT EXISTS bookingdb;
+
+USE userdb;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+USE bookingdb;
+
+CREATE TABLE IF NOT EXISTS booking (
+    bookingID INT AUTO_INCREMENT PRIMARY KEY,
+    userID INT NOT NULL,
+    showtimeId INT NOT NULL,
+    seats INT NOT NULL,
+    BookingDate DATE NOT NULL
+);
